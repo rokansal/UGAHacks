@@ -13,15 +13,15 @@ By leveraging ECL and Cloudflare AI to analyze data, React.js to build the web a
 
 ## Challenges we ran into
 
-	We ran into several issues with connecting to the cluster and had hiccups with the IDE that we were supposed to use. Additionally, there was a lot of incompatibility with databases and our computer OSes which limited our ability to work on the backend of the web app.
+We ran into several issues with connecting to the cluster and had hiccups with the IDE that we were supposed to use. Additionally, there was a lot of incompatibility with databases and our computer OSes which limited our ability to work on the backend of the web app.
 
 ## Accomplishments that we're proud of
 
-	We were able to power through the several issues we ran into as a team. Any one of us were able to call for help from each other without hesitation and receive valuable feedback/suggestions that allowed us to work through anything that was challenging us. The freedom we each allowed each other to work at our own pace and also choose our tasks also cemented the mutual respect we had for one another. Overall, we started this 
+We were able to power through the several issues we ran into as a team. Any one of us were able to call for help from each other without hesitation and receive valuable feedback/suggestions that allowed us to work through anything that was challenging us. The freedom we each allowed each other to work at our own pace and also choose our tasks also cemented the mutual respect we had for one another. Overall, we started this 
 
 ## What we learned
 	
-	The majority of our group was unfamiliar with Figma. Following quickstart guides and intuition allowed us to make progress very quickly and design an app that we are proud of. We also gained crucial experience in the fundamentals of fullstack development including frameworks such as express, node, and react. While we did not use all three of them, we did attempt to learn as much about them as possible. 
+The majority of our group was unfamiliar with Figma. Following quickstart guides and intuition allowed us to make progress very quickly and design an app that we are proud of. We also gained crucial experience in the fundamentals of fullstack development including frameworks such as express, node, and react. While we did not use all three of them, we did attempt to learn as much about them as possible. 
 
 ## What's next for Safe Steps
 
