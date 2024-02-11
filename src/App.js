@@ -8,6 +8,7 @@ import SignUpPage from "./components/SignUpPage";
 import "./App.css";
 import SignInPage from "./components/SignInPage";
 import LoginButton from "./components/login";
+import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
           <Route path="/signup" element={<SignUpPage/>} />
           <Route path="/login" element={<SignInPage/>} />
           <Route path="/li" element={<LoginButton/>} />
+          <Route path="/li" element={<LoginButton/>} />
+          <Route path="/home" element={<HomePage/>} />
         </Routes>
       </div>
     </Router>
