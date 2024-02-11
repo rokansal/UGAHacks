@@ -44,12 +44,12 @@ main {
 
 .main-menu h1 {
     display: block;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2rem; /* Increased font size */
+    font-weight: 700; /* Bold font */
     text-align: center;
     margin: 20px 0 20px;
     color: #fff;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
 }
 
 .logo {
@@ -68,17 +68,18 @@ main {
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 1rem;
-    padding: 15px 0;
+    font-size: 1.2rem; /* Increased font size */
+    padding: 20px 0; /* Increased padding */
     margin-left: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
 }
 
 .nav-item b:nth-child(1) {
     position: absolute;
-    top: -15px;
-    height: 15px;
+    top: -20px; /* Increased top */
+    height: 20px; /* Increased height */
     width: 100%;
     background: #fff;
     display: none;
@@ -97,8 +98,8 @@ main {
 
 .nav-item b:nth-child(2) {
     position: absolute;
-    bottom: -15px;
-    height: 15px;
+    bottom: -20px; /* Increased bottom */
+    height: 20px; /* Increased height */
     width: 100%;
     background: #fff;
     display: none;
@@ -127,16 +128,17 @@ main {
 }
 
 .nav-icon {
-    width: 60px;
-    height: 20px;
-    font-size: 20px;
+    width: 80px; /* Increased width */
+    height: 30px; /* Increased height */
+    font-size: 24px; /* Increased font size */
     text-align: center;
 }
 
 .nav-text {
     display: block;
-    width: 120px;
-    height: 20px;
+    width: 150px; /* Increased width */
+    height: 30px; /* Increased height */
+    font-size: 1.2rem; /* Increased font size */
 }
 
 /* CONTENT */
@@ -150,27 +152,26 @@ main {
 
 .left-content {
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: auto auto; /* Changed to auto */
     background: #f6f7fb;
     margin: 15px;
     padding: 20px;
     border-radius: 20px;
 }
 
-
 /* LEFT BOTTOM */
 
 .left-bottom {
     display: grid;
-    grid-template-columns: 55% 40%;
-    gap: 40px;
+    grid-template-columns: 1fr; /* Full width */
+    gap: 20px; /* Increased gap */
 }
 
 /* RIGHT CONTENT */
 
 .right-content {
     display: grid;
-    grid-template-rows: 5% 20% 75%;
+    grid-template-rows: 5% auto 20%; /* Adjusted heights */
     background: rgb(254, 254, 254);
     margin: 15px 15px 15px 0;
     padding: 20px 0;
@@ -198,33 +199,65 @@ main {
     align-items: center;
     flex-direction: column;
     position: relative;
-    padding: 10px 0;
-    width: 200px;
+    padding: 15px 0; /* Increased padding */
+    width: 250px; /* Increased width */
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
 }
 
 /* Apply styles to the input textbox */
-input[type="text"] {
+.input-container input[type="number"] {
     width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
+    padding: 10px; /* Increased padding */
+    border: 2px solid #ccc; /* Increased border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Increased font size */
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
 }
 
 /* Style the label if needed */
-label {
-    margin-bottom: 5px;
+.input-container label {
+    margin-bottom: 10px; /* Increased margin */
     display: block;
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Change to column */
+    align-items: center;
     /* Center the content horizontally */
+    padding: 20px; /* Added padding */
 }
 
 .input-container {
-    margin-top: 10px;
+    margin-top: 40px; /* Increased margin */
     text-align: center;
     /* Center the text and input horizontally */
+}
+
+/* Increase vertical space */
+.container {
+    margin-top: 40px;
+}
+
+/* Style children list and add child form */
+.children-list,
+.add-child-form {
+    margin-top: 40px;
+}
+
+.children-list {
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.add-child-form {
+    font-family: 'Roboto', sans-serif; /* Modern and blocky font */
+}
+
+/* Center zip code, child list, and add child form */
+.left-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import './styles/HomePage.css'; // Import HomePage CSS file
+import { useAuth0 } from "@auth0/auth0-react";
 
-function HomePage() {
+
+
+const HomePage = () => {
+    const { isAuthenticated } = useAuth0();
+    
   const [activeNavItem, setActiveNavItem] = useState(0);
   const [inputValue, setInputValue] = useState('');
   const [children, setChildren] = useState([
@@ -36,75 +41,78 @@ function HomePage() {
     setChildAge('');
   };
 
+  
   return (
-    <body>
-      <main>
-        <nav className="main-menu">
-          <h1>Safe Steps</h1>
-          <ul>
-            <li className={`nav-item ${activeNavItem === 0 ? 'active' : ''}`} onClick={() => handleNavItemClick(0)}>
-              <b></b>
-              <b></b>
-              <a href="#">
-                <i className="fa fa-house nav-icon"></i>
-                <span className="nav-text">Home</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="right-content">
-          <div className="user-info">
-            <div className="icon-container">
-              <i className="fa fa-bell nav-icon"></i>
-              <i className="fa fa-message nav-icon"></i>
-            </div>
-            <h4>Logged in as: Rohan Kansal</h4>
-          </div>
-          <div className="container">
-            <form onSubmit={handleSubmit}>
-              <div className="input-container">
-                <label htmlFor="textbox">Enter a Georgia zip code:</label>
-                <input type="number" id="textbox" name="textbox" min="0" value={inputValue} onChange={handleInputChange} />
-                <button type="submit">Enter</button>
+    isAuthenticated && (
+        <body>
+        <main>
+          <nav className="main-menu">
+            <h1>Safe Steps</h1>
+            <ul>
+              <li className={`nav-item ${activeNavItem === 0 ? 'active' : ''}`} onClick={() => handleNavItemClick(0)}>
+                <b></b>
+                <b></b>
+                <a href="#">
+                  <i className="fa fa-house nav-icon"></i>
+                  <span className="nav-text">Home</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="right-content">
+            <div className="user-info">
+              <div className="icon-container">
+                <i className="fa fa-bell nav-icon"></i>
+                <i className="fa fa-message nav-icon"></i>
               </div>
-            </form>
-            <div className="children-list">
-              <h2>Children List</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {children.map((child, index) => (
-                    <tr key={index}>
-                      <td>{child.name}</td>
-                      <td>{child.age}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <h4>Logged in as: Rohan Kansal</h4>
             </div>
-            <div className="add-child-form">
-              <h2>Add Child</h2>
+            <div className="container">
               <form onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="childName">Child's Name:</label>
-                  <input type="text" id="childName" value={childName} onChange={handleChildNameChange} />
+                <div className="input-container">
+                  <label htmlFor="textbox">Enter a Georgia zip code:</label>
+                  <input type="number" id="textbox" name="textbox" min="0" value={inputValue} onChange={handleInputChange} />
+                  <button type="submit">Enter</button>
                 </div>
-                <div>
-                  <label htmlFor="childAge">Child's Age:</label>
-                  <input type="number" id="childAge" value={childAge} onChange={handleChildAgeChange} />
-                </div>
-                <button type="submit">Add Child</button>
               </form>
+              <div className="children-list">
+                <h2>Children List</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {children.map((child, index) => (
+                      <tr key={index}>
+                        <td>{child.name}</td>
+                        <td>{child.age}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="add-child-form">
+                <h2>Add Child</h2>
+                <form onSubmit={handleSubmit}>
+                  <div>
+                    <label htmlFor="childName">Child's Name:</label>
+                    <input type="text" id="childName" value={childName} onChange={handleChildNameChange} />
+                  </div>
+                  <div>
+                    <label htmlFor="childAge">Child's Age:</label>
+                    <input type="number" id="childAge" value={childAge} onChange={handleChildAgeChange} />
+                  </div>
+                  <button type="submit">Add Child</button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </body>
+        </main>
+      </body>
+        )
   );
 }
 
