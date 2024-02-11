@@ -35,7 +35,14 @@
   transition: background-color 0.3s;
 }
 
+.top-middle {
+  display: flex;
+  justify-content: center;
+  top: 0;
+}
+
 .signup-link:hover,
-.login-link:hover {
+.login-link:hover,
+.signout-link:hover {
   background-color: #0056b3;
 }

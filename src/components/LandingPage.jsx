@@ -17,8 +17,8 @@ const LandingPage = () => {
           Sign Up
         </Link> */}
         <LoginButton />
-        <LogoutButton />
-        {/* <HomePage /> */}
+        {/* <LogoutButton /> */}
+        <HomePage />
       </div>
     </div>
   );
